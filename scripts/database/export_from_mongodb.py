@@ -2,9 +2,19 @@ import json
 import yaml
 from pymongo import MongoClient
 
-# Połączenie z MongoDB
-client = MongoClient("mongodb://localhost:27017/")
-db = client["hotel_reservation"]
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Get MongoDB configuration from environment variables
+MONGO_URI = os.getenv("MONGO_URI")
+DB_NAME = os.getenv("DB_NAME")
+
+# Establish connection
+client = MongoClient(MONGO_URI)
+db = client[DB_NAME]
 
 # Pobierz dane z kolekcji
 hotels = list(db.hotels.find({}, {'_id': 0}))
