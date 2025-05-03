@@ -1,0 +1,84 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Hotel Reservation System",
+    "type": "object",
+    "properties": {
+      "hotels": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "location": { "type": "string" },
+            "stars": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "rooms": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "number": { "type": "integer" },
+                  "type": { "type": "string", "enum": ["single", "double", "suite", "deluxe"] },
+                  "price": { "type": "number", "minimum": 0 },
+                  "available": { "type": "boolean" }
+                },
+                "required": ["number", "type", "price", "available"]
+              }
+            }
+          },
+          "required": ["name", "location", "stars", "rooms"]
+        }
+      },
+      "guests": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "first_name": { "type": "string" },
+            "last_name": { "type": "string" },
+            "email": {
+              "type": "string",
+              "format": "email"
+            },
+            "phone": {
+              "type": "string",
+              "pattern": "^\\+\\d{9,15}$"
+            }
+          },
+          "required": ["first_name", "last_name", "email", "phone"]
+        }
+      },
+      "reservations": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "guest_email": {
+              "type": "string",
+              "format": "email"
+            },
+            "room_number": { "type": "integer" },
+            "hotel_name": { "type": "string" },
+            "check_in": {
+              "type": "string",
+              "format": "date"
+            },
+            "check_out": {
+              "type": "string",
+              "format": "date"
+            },
+            "status": {
+              "type": "string",
+              "enum": ["confirmed", "cancelled", "pending"]
+            }
+          },
+          "required": ["guest_email", "room_number", "hotel_name", "check_in", "check_out", "status"]
+        }
+      }
+    },
+    "required": ["hotels", "guests", "reservations"]
+  }
+  

@@ -1,0 +1,42 @@
+{
+    "hotels": [
+      {
+        "name": "Hotel Sunrise",
+        "location": "Warszawa",
+        "stars": 4,
+        "rooms": [
+          {
+            "number": 101,
+            "type": "double",
+            "price": 350,
+            "available": true
+          },
+          {
+            "number": 102,
+            "type": "single",
+            "price": 250,
+            "available": false
+          }
+        ]
+      }
+    ],
+    "guests": [
+      {
+        "first_name": "Anna",
+        "last_name": "Kowalska",
+        "email": "anna.kowalska@example.com",
+        "phone": "+48123456789"
+      }
+    ],
+    "reservations": [
+      {
+        "guest_email": "anna.kowalska@example.com",
+        "room_number": 101,
+        "hotel_name": "Hotel Sunrise",
+        "start_date": "2024-07-01",
+        "end_date": "2024-07-05",
+        "status": "confirmed"
+      }
+    ]
+  }
+  

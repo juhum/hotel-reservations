@@ -1,0 +1,117 @@
+hotels:
+- name: Hotel Giewont
+  location: Zakopane
+  stars: 4
+  rooms:
+  - number: 101
+    type: double
+    price: 400
+    available: true
+  - number: 102
+    type: single
+    price: 280
+    available: false
+  - number: 103
+    type: suite
+    price: 650
+    available: true
+- name: Baltic Inn
+  location: Gdańsk
+  stars: 3
+  rooms:
+  - number: 201
+    type: double
+    price: 390
+    available: true
+  - number: 202
+    type: double
+    price: 420
+    available: true
+  - number: 203
+    type: suite
+    price: 700
+    available: false
+- name: Royal City Hotel
+  location: Warszawa
+  stars: 5
+  rooms:
+  - number: 301
+    type: single
+    price: 350
+    available: true
+  - number: 302
+    type: double
+    price: 500
+    available: false
+  - number: 303
+    type: suite
+    price: 850
+    available: true
+  - number: 304
+    type: deluxe
+    price: 1200
+    available: false
+guests:
+- first_name: Anna
+  last_name: Nowak
+  email: anna.nowak@example.com
+  phone: '+48600100200'
+- first_name: Jan
+  last_name: Kowalski
+  email: jan.kowalski@example.com
+  phone: '+48601200300'
+- first_name: Maria
+  last_name: Wiśniewska
+  email: maria.w@example.com
+  phone: '+48602300400'
+- first_name: Piotr
+  last_name: Zieliński
+  email: piotr.z@example.com
+  phone: '+48603400500'
+- first_name: Katarzyna
+  last_name: Lewandowska
+  email: k.lewandowska@example.com
+  phone: '+48604500600'
+reservations:
+- guest_email: anna.nowak@example.com
+  room_number: 102
+  hotel_name: Hotel Giewont
+  check_in: '2025-06-01'
+  check_out: '2025-06-07'
+  status: confirmed
+- guest_email: jan.kowalski@example.com
+  room_number: 302
+  hotel_name: Royal City Hotel
+  check_in: '2025-06-10'
+  check_out: '2025-06-15'
+  status: pending
+- guest_email: maria.w@example.com
+  room_number: 203
+  hotel_name: Baltic Inn
+  check_in: '2025-05-15'
+  check_out: '2025-05-20'
+  status: cancelled
+- guest_email: piotr.z@example.com
+  room_number: 101
+  hotel_name: Hotel Giewont
+  check_in: '2025-07-01'
+  check_out: '2025-07-05'
+  status: confirmed
+- guest_email: piotr.z@example.com
+  room_number: 201
+  hotel_name: Baltic Inn
+  check_in: '2025-08-10'
+  check_out: '2025-08-15'
+  status: confirmed
+- guest_email: k.lewandowska@example.com
+  room_number: 304
+  hotel_name: Royal City Hotel
+  check_in: '2025-06-20'
+  check_out: '2025-06-25'
+  status: confirmed
+- guest_email: anna.nowak@example.com
+  room_number: 303
+  hotel_name: Royal City Hotel
+  check_in: '2025-07-05'
+  check_out: '2025-07-10'
+  status: confirmed
