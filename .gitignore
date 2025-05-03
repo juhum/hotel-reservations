@@ -3,6 +3,7 @@ json_output.json
 *.html
 json_export.json
 json_output.json
+yaml_export.yaml
 
 *.ipynb_checkpoints/
 
