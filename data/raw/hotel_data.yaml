@@ -54,31 +54,318 @@ hotels:
         price: 1200
         available: false
 
+  - name: Mountain View Resort
+    location: Karpacz
+    stars: 4
+    rooms:
+      - number: 401
+        type: double
+        price: 430
+        available: true
+      - number: 402
+        type: suite
+        price: 680
+        available: true
+      - number: 403
+        type: deluxe
+        price: 1100
+        available: false
+
+  - name: Seaside Escape
+    location: Sopot
+    stars: 5
+    rooms:
+      - number: 501
+        type: single
+        price: 390
+        available: true
+      - number: 502
+        type: double
+        price: 520
+        available: false
+      - number: 503
+        type: suite
+        price: 750
+        available: true
+      - number: 504
+        type: deluxe
+        price: 1300
+        available: true
+
+  - name: Lakeview Retreat
+    location: Zakopane
+    stars: 4
+    rooms:
+      - number: 601
+        type: double
+        price: 450
+        available: true
+      - number: 602
+        type: suite
+        price: 750
+        available: false
+      - number: 603
+        type: deluxe
+        price: 950
+        available: true
+
+  - name: City Escape Hotel
+    location: Wrocław
+    stars: 3
+    rooms:
+      - number: 701
+        type: single
+        price: 320
+        available: true
+      - number: 702
+        type: double
+        price: 400
+        available: true
+      - number: 703
+        type: suite
+        price: 650
+        available: false
+
+  - name: Horizon Towers
+    location: Kraków
+    stars: 5
+    rooms:
+      - number: 801
+        type: double
+        price: 550
+        available: true
+      - number: 802
+        type: suite
+        price: 850
+        available: true
+      - number: 803
+        type: deluxe
+        price: 1300
+        available: false
+
+  - name: Ocean Breeze Hotel
+    location: Gdańsk
+    stars: 4
+    rooms:
+      - number: 901
+        type: double
+        price: 450
+        available: true
+      - number: 902
+        type: suite
+        price: 750
+        available: true
+      - number: 903
+        type: deluxe
+        price: 1200
+        available: false
+
+  - name: Riverside Resort
+    location: Szczecin
+    stars: 4
+    rooms:
+      - number: 1001
+        type: single
+        price: 380
+        available: true
+      - number: 1002
+        type: double
+        price: 500
+        available: false
+      - number: 1003
+        type: suite
+        price: 850
+        available: true
+
+  - name: Pinewood Hotel
+    location: Białystok
+    stars: 3
+    rooms:
+      - number: 1101
+        type: double
+        price: 330
+        available: true
+      - number: 1102
+        type: suite
+        price: 650
+        available: false
+      - number: 1103
+        type: deluxe
+        price: 1100
+        available: true
+
+  - name: Alpine Lodge
+    location: Zakopane
+    stars: 4
+    rooms:
+      - number: 1201
+        type: single
+        price: 360
+        available: true
+      - number: 1202
+        type: double
+        price: 450
+        available: false
+      - number: 1203
+        type: suite
+        price: 800
+        available: true
+
+  - name: Sunset Bay Hotel
+    location: Sopot
+    stars: 5
+    rooms:
+      - number: 1301
+        type: suite
+        price: 700
+        available: true
+      - number: 1302
+        type: deluxe
+        price: 1300
+        available: false
+      - number: 1303
+        type: single
+        price: 400
+        available: true
+
+  - name: Ocean View Resort
+    location: Gdynia
+    stars: 5
+    rooms:
+      - number: 1401
+        type: double
+        price: 480
+        available: true
+      - number: 1402
+        type: suite
+        price: 750
+        available: true
+      - number: 1403
+        type: deluxe
+        price: 1200
+        available: false
+
 guests:
   - first_name: Anna
     last_name: Nowak
     email: anna.nowak@example.com
     phone: "+48600100200"
-
   - first_name: Jan
     last_name: Kowalski
     email: jan.kowalski@example.com
     phone: "+48601200300"
-
   - first_name: Maria
     last_name: Wiśniewska
     email: maria.w@example.com
     phone: "+48602300400"
-
   - first_name: Piotr
     last_name: Zieliński
     email: piotr.z@example.com
     phone: "+48603400500"
-
   - first_name: Katarzyna
     last_name: Lewandowska
     email: k.lewandowska@example.com
     phone: "+48604500600"
+  - first_name: Tomasz
+    last_name: Majewski
+    email: tomasz.majewski@example.com
+    phone: "+48605600700"
+  - first_name: Ewa
+    last_name: Kaczmarek
+    email: e.kaczmarek@example.com
+    phone: "+48606700800"
+  - first_name: Krzysztof
+    last_name: Wójcik
+    email: krzysztof.wojcik@example.com
+    phone: "+48607800900"
+  - first_name: Michał
+    last_name: Nowakowski
+    email: michal.nowakowski@example.com
+    phone: "+48608901000"
+  - first_name: Agnieszka
+    last_name: Kowalczyk
+    email: agnieszka.kowalczyk@example.com
+    phone: "+48601002010"
+  - first_name: Andrzej
+    last_name: Zawisza
+    email: andrzej.zawisza@example.com
+    phone: "+48602003030"
+  - first_name: Natalia
+    last_name: Kwiatkowska
+    email: natalia.kwiatkowska@example.com
+    phone: "+48603004040"
+  - first_name: Paweł
+    last_name: Jabłoński
+    email: pawel.jablonski@example.com
+    phone: "+48604005050"
+  - first_name: Wojciech
+    last_name: Wiśniewski
+    email: wojciech.wisniewski@example.com
+    phone: "+48605006060"
+  - first_name: Zofia
+    last_name: Borowska
+    email: zofia.borowska@example.com
+    phone: "+48606007070"
+  - first_name: Dorota
+    last_name: Pawlak
+    email: dorota.pawlak@example.com
+    phone: "+48607008080"
+  - first_name: Jakub
+    last_name: Pawlak
+    email: jakub.pawlak@example.com
+    phone: "+48608009090"
+  - first_name: Marta
+    last_name: Michalska
+    email: marta.michalska@example.com
+    phone: "+48609010000"
+  - first_name: Rafał
+    last_name: Szymański
+    email: rafal.szymanski@example.com
+    phone: "+48610011000"
+  - first_name: Alicja
+    last_name: Nowak
+    email: alicja.nowak@example.com
+    phone: "+48611012000"
+  - first_name: Tomasz
+    last_name: Borkowski
+    email: tomasz.borkowski@example.com
+    phone: "+48612013000"
+  - first_name: Michał
+    last_name: Lisowski
+    email: michal.lisowski@example.com
+    phone: "+48613014000"
+  - first_name: Monika
+    last_name: Kowalska
+    email: monika.kowalska@example.com
+    phone: "+48614015000"
+  - first_name: Adam
+    last_name: Nowak
+    email: adam.nowak@example.com
+    phone: "+48615016000"
+  - first_name: Marcin
+    last_name: Zawisza
+    email: marcin.zawisza@example.com
+    phone: "+48616017000"
+  - first_name: Aleksandra
+    last_name: Woźniak
+    email: aleksandra.wozniak@example.com
+    phone: "+48617018000"
+  - first_name: Łukasz
+    last_name: Bąk
+    email: lukasz.bak@example.com
+    phone: "+48618019000"
+  - first_name: Natalia
+    last_name: Zielińska
+    email: natalia.zielinska@example.com
+    phone: "+48619020000"
+  - first_name: Kamil
+    last_name: Kowalczyk
+    email: kamil.kowalczyk@example.com
+    phone: "+48620021000"
+  - first_name: Michał
+    last_name: Grochowski
+    email: michal.grochowski@example.com
+    phone: "+48621022000"
 
 reservations:
   - guest_email: anna.nowak@example.com
@@ -87,45 +374,195 @@ reservations:
     check_in: 2025-06-01
     check_out: 2025-06-07
     status: confirmed
-
   - guest_email: jan.kowalski@example.com
     room_number: 302
     hotel_name: Royal City Hotel
     check_in: 2025-06-10
     check_out: 2025-06-15
     status: pending
-
   - guest_email: maria.w@example.com
     room_number: 203
     hotel_name: Baltic Inn
     check_in: 2025-05-15
     check_out: 2025-05-20
     status: cancelled
-
   - guest_email: piotr.z@example.com
     room_number: 101
     hotel_name: Hotel Giewont
     check_in: 2025-07-01
     check_out: 2025-07-05
     status: confirmed
-
   - guest_email: piotr.z@example.com
     room_number: 201
     hotel_name: Baltic Inn
     check_in: 2025-08-10
     check_out: 2025-08-15
     status: confirmed
-
   - guest_email: k.lewandowska@example.com
     room_number: 304
     hotel_name: Royal City Hotel
     check_in: 2025-06-20
     check_out: 2025-06-25
     status: confirmed
-
   - guest_email: anna.nowak@example.com
     room_number: 303
     hotel_name: Royal City Hotel
     check_in: 2025-07-05
     check_out: 2025-07-10
+    status: confirmed
+  - guest_email: tomasz.majewski@example.com
+    room_number: 401
+    hotel_name: Mountain View Resort
+    check_in: 2025-06-12
+    check_out: 2025-06-17
+    status: confirmed
+  - guest_email: e.kaczmarek@example.com
+    room_number: 504
+    hotel_name: Seaside Escape
+    check_in: 2025-07-20
+    check_out: 2025-07-25
+    status: pending
+  - guest_email: tomasz.majewski@example.com
+    room_number: 503
+    hotel_name: Seaside Escape
+    check_in: 2025-08-01
+    check_out: 2025-08-06
+    status: cancelled
+  - guest_email: krzysztof.wojcik@example.com
+    room_number: 402
+    hotel_name: Mountain View Resort
+    check_in: 2025-08-15
+    check_out: 2025-08-20
+    status: confirmed
+  - guest_email: michal.nowakowski@example.com
+    room_number: 601
+    hotel_name: Lakeview Retreat
+    check_in: 2025-07-10
+    check_out: 2025-07-15
+    status: confirmed
+  - guest_email: agnieszka.kowalczyk@example.com
+    room_number: 701
+    hotel_name: City Escape Hotel
+    check_in: 2025-08-05
+    check_out: 2025-08-10
+    status: pending
+  - guest_email: andrzej.zawisza@example.com
+    room_number: 801
+    hotel_name: Horizon Towers
+    check_in: 2025-08-01
+    check_out: 2025-08-05
+    status: confirmed
+  - guest_email: natalia.kwiatkowska@example.com
+    room_number: 902
+    hotel_name: Ocean Breeze Hotel
+    check_in: 2025-06-12
+    check_out: 2025-06-16
+    status: confirmed
+  - guest_email: pawel.jablonski@example.com
+    room_number: 1001
+    hotel_name: Riverside Resort
+    check_in: 2025-07-15
+    check_out: 2025-07-20
+    status: cancelled
+  - guest_email: wojciech.wisniewski@example.com
+    room_number: 1101
+    hotel_name: Pinewood Hotel
+    check_in: 2025-06-18
+    check_out: 2025-06-22
+    status: confirmed
+  - guest_email: zofia.borowska@example.com
+    room_number: 1201
+    hotel_name: Alpine Lodge
+    check_in: 2025-07-05
+    check_out: 2025-07-10
+    status: confirmed
+  - guest_email: dorota.pawlak@example.com
+    room_number: 1301
+    hotel_name: Sunset Bay Hotel
+    check_in: 2025-06-15
+    check_out: 2025-06-19
+    status: confirmed
+  - guest_email: jakub.pawlak@example.com
+    room_number: 1401
+    hotel_name: Ocean View Resort
+    check_in: 2025-08-08
+    check_out: 2025-08-12
+    status: pending
+  - guest_email: marta.michalska@example.com
+    room_number: 1302
+    hotel_name: Sunset Bay Hotel
+    check_in: 2025-07-10
+    check_out: 2025-07-14
+    status: confirmed
+  - guest_email: rafal.szymanski@example.com
+    room_number: 803
+    hotel_name: Horizon Towers
+    check_in: 2025-06-20
+    check_out: 2025-06-25
+    status: cancelled
+  - guest_email: alicja.nowak@example.com
+    room_number: 1102
+    hotel_name: Pinewood Hotel
+    check_in: 2025-07-20
+    check_out: 2025-07-25
+    status: confirmed
+  - guest_email: tomasz.borkowski@example.com
+    room_number: 1402
+    hotel_name: Ocean View Resort
+    check_in: 2025-08-15
+    check_out: 2025-08-20
+    status: confirmed
+  - guest_email: michal.lisowski@example.com
+    room_number: 603
+    hotel_name: Lakeview Retreat
+    check_in: 2025-06-25
+    check_out: 2025-06-30
+    status: confirmed
+  - guest_email: monika.kowalska@example.com
+    room_number: 703
+    hotel_name: City Escape Hotel
+    check_in: 2025-06-10
+    check_out: 2025-06-15
+    status: confirmed
+  - guest_email: adam.nowak@example.com
+    room_number: 902
+    hotel_name: Ocean Breeze Hotel
+    check_in: 2025-08-05
+    check_out: 2025-08-10
+    status: pending
+  - guest_email: marcin.zawisza@example.com
+    room_number: 1002
+    hotel_name: Riverside Resort
+    check_in: 2025-08-01
+    check_out: 2025-08-05
+    status: confirmed
+  - guest_email: aleksandra.wozniak@example.com
+    room_number: 1103
+    hotel_name: Pinewood Hotel
+    check_in: 2025-07-01
+    check_out: 2025-07-05
+    status: confirmed
+  - guest_email: lukasz.bak@example.com
+    room_number: 1202
+    hotel_name: Alpine Lodge
+    check_in: 2025-06-22
+    check_out: 2025-06-26
+    status: pending
+  - guest_email: natalia.zielinska@example.com
+    room_number: 1303
+    hotel_name: Sunset Bay Hotel
+    check_in: 2025-08-12
+    check_out: 2025-08-15
+    status: confirmed
+  - guest_email: kamil.kowalczyk@example.com
+    room_number: 1403
+    hotel_name: Ocean View Resort
+    check_in: 2025-07-25
+    check_out: 2025-07-30
+    status: cancelled
+  - guest_email: michal.grochowski@example.com
+    room_number: 1003
+    hotel_name: Riverside Resort
+    check_in: 2025-08-25
+    check_out: 2025-08-30
     status: confirmed
