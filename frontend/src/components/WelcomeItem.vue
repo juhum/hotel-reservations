@@ -78,7 +78,9 @@ const handleDrop = (event) => {
   isDragging.value = false
   const files = Array.from(event.dataTransfer.files)
   droppedFiles.value = files.map(file => ({
-    ...file,
+    file: file,
+    name: file.name,
+    size: file.size,
     uploadStatus: null
   }))
   error.value = null
@@ -98,25 +100,38 @@ const uploadToServer = async () => {
   error.value = null
 
   try {
-    for (const file of droppedFiles.value) {
-      file.uploadStatus = 'uploading'
+    for (const fileObj of droppedFiles.value) {
+      fileObj.uploadStatus = 'uploading'
       
       const formData = new FormData()
-      formData.append('file', file)
+      formData.append('file', fileObj.file)
 
-      await axios.post('/api/reservations/upload', formData, {
+      const response = await axios.post('http://localhost:8000/api/reservations/upload', formData, {
         headers: {
-          'Content-Type': 'multipart/form-data'
+          'Content-Type': 'multipart/form-data',
+          'Accept': 'application/json'
         }
       })
 
-      file.uploadStatus = 'success'
+      if (response.data) {
+        fileObj.uploadStatus = 'success'
+        console.log('Upload successful:', response.data)
+      }
     }
   } catch (err) {
-    error.value = err.response?.data?.message || 'Failed to upload files. Please try again.'
-    droppedFiles.value.forEach(file => {
-      if (file.uploadStatus === 'uploading') {
-        file.uploadStatus = 'error'
+    console.error('Upload error:', err)
+    if (err.response?.data?.detail) {
+      if (Array.isArray(err.response.data.detail)) {
+        error.value = err.response.data.detail.map(e => e.msg).join(', ')
+      } else {
+        error.value = err.response.data.detail
+      }
+    } else {
+      error.value = 'Failed to upload files. Please try again.'
+    }
+    droppedFiles.value.forEach(fileObj => {
+      if (fileObj.uploadStatus === 'uploading') {
+        fileObj.uploadStatus = 'error'
       }
     })
   } finally {
@@ -124,14 +139,112 @@ const uploadToServer = async () => {
   }
 }
 
-const exportToCSV = () => {
-  // TODO: Implement CSV export
-  console.log('Exporting to CSV...')
+const exportToCSV = async () => {
+  isUploading.value = true
+  error.value = null
+
+  try {
+    for (const fileObj of droppedFiles.value) {
+      fileObj.uploadStatus = 'uploading'
+      
+      const formData = new FormData()
+      formData.append('file', fileObj.file)
+
+      const response = await axios.post('http://localhost:8000/api/yaml-to-csv', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'Accept': 'text/csv'
+        },
+        responseType: 'blob'  // Important for handling file download
+      })
+
+      // Create a download link
+      const url = window.URL.createObjectURL(new Blob([response.data]))
+      const link = document.createElement('a')
+      link.href = url
+      link.setAttribute('download', `${fileObj.name.replace('.yaml', '')}.csv`)
+      document.body.appendChild(link)
+      link.click()
+      
+      // Clean up
+      link.remove()
+      window.URL.revokeObjectURL(url)
+      
+      fileObj.uploadStatus = 'success'
+    }
+  } catch (err) {
+    console.error('Export error:', err)
+    if (err.response?.data?.detail) {
+      if (Array.isArray(err.response.data.detail)) {
+        error.value = err.response.data.detail.map(e => e.msg).join(', ')
+      } else {
+        error.value = err.response.data.detail
+      }
+    } else {
+      error.value = 'Failed to export files. Please try again.'
+    }
+    droppedFiles.value.forEach(fileObj => {
+      if (fileObj.uploadStatus === 'uploading') {
+        fileObj.uploadStatus = 'error'
+      }
+    })
+  } finally {
+    isUploading.value = false
+  }
 }
 
-const exportToHTML = () => {
-  // TODO: Implement HTML export
-  console.log('Exporting to HTML...')
+const exportToHTML = async () => {
+  isUploading.value = true
+  error.value = null
+
+  try {
+    for (const fileObj of droppedFiles.value) {
+      fileObj.uploadStatus = 'uploading'
+      
+      const formData = new FormData()
+      formData.append('file', fileObj.file)
+
+      const response = await axios.post('http://localhost:8000/api/yaml-to-html', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'Accept': 'text/html'
+        },
+        responseType: 'blob'  // Important for handling file download
+      })
+
+      // Create a download link
+      const url = window.URL.createObjectURL(new Blob([response.data]))
+      const link = document.createElement('a')
+      link.href = url
+      link.setAttribute('download', `${fileObj.name.replace('.yaml', '')}.html`)
+      document.body.appendChild(link)
+      link.click()
+      
+      // Clean up
+      link.remove()
+      window.URL.revokeObjectURL(url)
+      
+      fileObj.uploadStatus = 'success'
+    }
+  } catch (err) {
+    console.error('Export error:', err)
+    if (err.response?.data?.detail) {
+      if (Array.isArray(err.response.data.detail)) {
+        error.value = err.response.data.detail.map(e => e.msg).join(', ')
+      } else {
+        error.value = err.response.data.detail
+      }
+    } else {
+      error.value = 'Failed to export files. Please try again.'
+    }
+    droppedFiles.value.forEach(fileObj => {
+      if (fileObj.uploadStatus === 'uploading') {
+        fileObj.uploadStatus = 'error'
+      }
+    })
+  } finally {
+    isUploading.value = false
+  }
 }
 </script>
 
